@@ -1,0 +1,289 @@
+/*
+$breakpoint argyment choices
+- phone
+- tab-port
+- tab-land
+- big-desktop
+1 em = 16px
+*/
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box; }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 52%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.features {
+  animation-name: moveInLeft;
+  animation-duration: 1s; }
+  .features .row {
+    max-width: 114rem;
+    margin: 0 auto;
+    margin-bottom: 6em; }
+    .features .row:not(:last-child) {
+      margin-bottom: 8rem; }
+    .features .row [class^='col-'] {
+      /*All class that starts with 'col-' */
+      float: left; }
+      .features .row [class^='col-']:not(:last-child) {
+        margin-right: 6rem; }
+        @media (max-width: 37.5em) {
+          .features .row [class^='col-']:not(:last-child) {
+            margin-right: 0px;
+            width: 100% !important;
+            margin-bottom: 5rem; } }
+      @media (max-width: 37.5em) {
+        .features .row [class^='col-'] {
+          width: 100% !important; } }
+    .features .row:after {
+      content: "";
+      clear: both;
+      /* both left and right floating elements */
+      display: table; }
+    .features .row .col-1-of-2 {
+      width: calc((100% - 6rem)/2);
+      text-align: center; }
+  .features .feature_img {
+    max-height: 13rem; }
+  .features .features-sub {
+    font-size: 2rem;
+    font-weight: 400; }
+  .features .feature__h1 {
+    font-size: 2.8rem;
+    padding: 1.2rem; }
+
+.header {
+  height: 95vh;
+  /* 95% of viewport height */
+  background-image: linear-gradient(to right bottom, rgba(14, 196, 147, 0.8), rgba(21, 93, 69, 0.8)), url(https://cdn.pixabay.com/photo/2015/05/12/09/13/freelancer-763730_960_720.jpg);
+  color: #55c57a;
+  background-size: cover;
+  /* Always try to fit viewport */
+  background-position: top;
+  /* top stays the same as we resize browser */
+  text-transform: uppercase;
+  color: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%); }
+  .header-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* These 50% are only for the box not for the parent */
+    text-align: center; }
+  .header-btn {
+    margin-top: 2rem;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    border-color: #55c57a;
+    transform: all .2s;
+    position: relative;
+    background-color: #ffffff; }
+    .header-btn a {
+      text-decoration: none;
+      font-size: 2rem;
+      color: black; }
+    .header-btn:hover {
+      transform: translateY(-0.2rem);
+      /* go up negative */
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+    .header-btn:active {
+      transform: translateY(-0.1rem);
+      /* go up negative */ }
+  .header-main {
+    font-size: 5.5rem;
+    font-weight: 900;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    color: #a6ff4c; }
+  .header-sub {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #ffffff; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 35rempx;
+  height: 25rem;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+  margin: 0 auto; }
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d; }
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); }
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden; }
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: black;
+  display: relative; }
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #0ec493;
+  color: #fffcfc;
+  transform: rotateY(180deg); }
+
+.flip-card__backText {
+  font-size: 2.5rem; }
+
+.think {
+  width: 64px; }
+
+.review {
+  padding-bottom: 20rem;
+  background-image: linear-gradient(to right bottom, rgba(32, 32, 82, 0.8), rgba(0, 98, 196, 0.8)), url(https://cdn.pixabay.com/photo/2018/03/26/06/20/desktop-3261768_960_720.jpg);
+  background-size: cover;
+  /* Always try to fit viewport */
+  background-position: top;
+  /* top stays the same as we resize browser */ }
+  .review-h1 {
+    color: #c7d4ff;
+    font-size: 4.2rem;
+    padding-top: 10rem;
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase; }
+  .review-li__box {
+    padding-top: 7rem;
+    padding-left: 5rem; }
+  .review-li {
+    color: white;
+    font-size: 3.2rem;
+    text-align: left;
+    margin: 0 auto;
+    list-style-type: square; }
+  .review-h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    color: #c8f05c;
+    text-transform: uppercase; }
+  .review-img {
+    width: 30rem;
+    padding-top: 7rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s; }
+    @media (max-width: 37.5em) {
+      .review-img {
+        padding-top: 0 !important; } }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  margin-bottom: 6em; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row [class^='col-'] {
+    /*All class that starts with 'col-' */
+    float: left; }
+    .row [class^='col-']:not(:last-child) {
+      margin-right: 6rem; }
+      @media (max-width: 37.5em) {
+        .row [class^='col-']:not(:last-child) {
+          margin-right: 0px;
+          width: 100% !important;
+          margin-bottom: 5rem; } }
+    @media (max-width: 37.5em) {
+      .row [class^='col-'] {
+        width: 100% !important; } }
+  .row:after {
+    content: "";
+    clear: both;
+    /* both left and right floating elements */
+    display: table; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem)/2);
+    text-align: center; }
+
+.footer {
+  background-color: #545365;
+  background-image: linear-gradient(to right, rgba(46, 45, 58, 0.8), rgba(48, 47, 60, 0.8)); }
+  .footer ul {
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    padding-top: 2rem;
+    text-align: left;
+    float: right; }
+    @media (max-width: 37.5em) {
+      .footer ul {
+        float: left; } }
+    @media (max-width: 37.5em) {
+      .footer ul {
+        padding: 5rem 10rem; } }
+  .footer a {
+    color: white; }
+  .footer .aboutUs {
+    padding-top: 20rem;
+    color: white; }
+    @media (max-width: 37.5em) {
+      .footer .aboutUs {
+        padding: 5rem 10rem; } }
+    .footer .aboutUs h2 {
+      font-size: 2.5rem;
+      text-align: left; }
+    .footer .aboutUs p {
+      padding-top: 2.5rem;
+      font-size: 1.5rem;
+      text-align: left; }
+  .footer [class^='col-'] :not(:last-child) {
+    margin-right: 20rem !important; }
+  .footer .copy {
+    color: white;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding-bottom: 2rem; }
+
+.social {
+  text-align: center; }
+
+.collect {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center; }
