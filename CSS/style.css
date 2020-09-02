@@ -245,7 +245,7 @@ html {
   .footer ul {
     list-style-type: none;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: white;
     padding-top: 2rem;
     text-align: left;
@@ -255,7 +255,7 @@ html {
         float: left; } }
     @media (max-width: 37.5em) {
       .footer ul {
-        padding: 5rem 10rem; } }
+        padding: 5rem 5rem; } }
   .footer a {
     color: white; }
   .footer .aboutUs {
@@ -263,13 +263,13 @@ html {
     color: white; }
     @media (max-width: 37.5em) {
       .footer .aboutUs {
-        padding: 5rem 10rem; } }
+        padding: 5rem 5rem; } }
     .footer .aboutUs h2 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       text-align: left; }
     .footer .aboutUs p {
       padding-top: 2.5rem;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       text-align: left; }
   .footer [class^='col-'] :not(:last-child) {
     margin-right: 20rem !important; }
